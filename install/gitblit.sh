@@ -17,9 +17,7 @@ fi
 #instalar gitblit
 #Descargar el war de gitblit
 #En WEB-INF/web.xml el  baseFolder es /srv/gitblit
-#Renombrar eel fichero WAR a "gitblit.war" para que el path de la url no contenga la versión
+#Renombrar eel fichero WAR a "gitblit.war" para que el path de la url no contenga la versiï¿½n
 sudo mkdir /srv/gitblit
 sudo chown tomcat7:tomcat7 /srv/gitblit
-cd /var/lib/tomcat7/webapps
-sudo wget https://www.dropbox.com/s/fn2exocv58wpg4u/gitblit.war
-mv gitblit.war git.war
+cp ./bin/gitblit.war /var/lib/tomcat7/webapps/git.war
