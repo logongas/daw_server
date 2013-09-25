@@ -24,7 +24,7 @@ El script preguntará para instalar lo siguiente:
   * gitbit
   * jenkins
   * sonar
-  * newrelic
+  * newrelic (Es necesario tener una cuenta en http://newrelic.com/ y una License Key)
 
 Tambien se creará una página de inicio en /var/www para poder acceder a todos los productos instalados desde la web.
 Deberás modificar el fichero /var/www/index.html para quitar los productos que no se han instalado.
