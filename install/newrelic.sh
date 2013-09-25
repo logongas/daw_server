@@ -14,6 +14,8 @@ if [ "$1" != "--install" ]; then
 	exit 1
 fi
 
+license_key=$2
+
 #Monitorizar el servidor
 wget -O /etc/apt/sources.list.d/newrelic.list http://download.newrelic.com/debian/newrelic.list
 apt-key adv --keyserver hkp://subkeys.pgp.net --recv-keys 548C16BF
