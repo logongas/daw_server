@@ -1,0 +1,67 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 0px;
+}
+
+h1.title {
+    font-size: 3em;
+}
+
+.hero-unit {
+    padding: 30px;
+}
+
+#sobremi{
+    margin-top: 00px;
+}
+
+#sobremi h1{
+    color: #000;
+    font-size: 3em;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+}
+
+#sobremi h2{
+    font-weight: normal;
+    color: #555;
+    margin: 20px 0px 30px;
+    line-height: 1.4em;
+    font-family: Georgia, serif;
+} 
+
+h1.subh1{
+	margin-top: 0px;
+	
+}
+
+.sub_quote h2{
+	font-family: Georgia;
+	color: #777;
+	font-weight: normal;
+	line-height: 1.3em;
+	font-style: italic;
+}
+
+.sub_quote{
+	padding: 30px 0px 30px;
+	margin:10px 0px 30px;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+}
+
+#imgteacher {
+    padding-top: 20px;
+    width:80%;
+}
+
+#imgteacher {
+    padding-top: 20px;
+    width:80%;
+}
+
+img.centred {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
