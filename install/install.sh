@@ -21,7 +21,9 @@ ask MySQL
 if [ "$install" == "true" ]; then
 	./mysql.sh --install
 	
-	echo "Escribe el nombre de las bases de datos a crear(separadas por espacios):"
+        echo "Ahora podra anyadir nuevas bases de datos a mysql."
+        echo "Cada base de datos creara un usuario con el mismo nombre que la base de datos y con password igual al nombre del usuario"
+	echo "Escribe el nombre de las bases de datos a crear,separadas por espacios ([ENTER] para no crear ninguna):"
 	read $databases
 	for database in $databases
 	do
@@ -76,7 +78,8 @@ if [ "$install" == "true" ]; then
 	./tomcat.sh --install $tomcat_port $tomcat_ssh_port $master_password $min_heap_size_mb
 	
 	if [ "$instalado_apache" == "true" ]; then
-		./apache_and_tomcat.sh --install
+		./apache_and_tomcat.sh --install 
+		./add_tomcat_app_to_apache.sh --install manager
 	fi
 	
 	
