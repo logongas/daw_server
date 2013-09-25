@@ -1,0 +1,21 @@
+gitblit
+ 
+WEB-INF/web.xml en el parámetro "baseFolder" tiene el valor:
+/srv/gitblit
+
+
+En WEB-INF\data\gitblit.properties el parámetro "git.defaultAccessRestriction" tiene el valor
+PUSH
+
+En WEB-INF\data\gitblit.properties el parámetro "web.forwardSlashCharacter" tiene el valor
+!
+
+En WEB-INF\data\gitblit.properties el parámetro "web.forceDefaultLocale" tiene el valor
+en-US
+
+
+En WEB-INF\data\gitblit.properties el parámetro "web.mountParameters" tiene el valor
+false
+
+
+
