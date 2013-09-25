@@ -2,7 +2,8 @@
 #Instalador global
 set -e
 
-./install/install.sh
+cd ./install
+./install.sh
 
 
 

@@ -5,7 +5,7 @@ set -e
 ask() { 
 install="false"
 while true; do
-    read -p "¿Deseas instalar $* (s/n)?" answer
+    read -p "Deseas instalar $* (s/n)?" answer
     case $answer in
         [Ss]* ) install="true"; break;;
         [Nn]* ) install="false"; break;;
@@ -112,12 +112,18 @@ if [ "$install" == "true" ]; then
 	
 fi
 
-#ask New Relic
-#if [ "$install" == "true" ]; then
-#    echo "License Key"
-#    read license_key
-#    ./newrelic.sh --install $license_key
-#fi	
+ask New Relic
+if [ "$install" == "true" ]; then
+    echo "Para instalar newrelic necesita hacer creado previamente una cuenta en https://newrelic.com y tener una 'License Key'"
+
+    echo "Confirme:"
+    ask New Relic
+    if [ "$install" == "true" ]; then
+        echo "New Relic License Key:"
+        read license_key
+        ./newrelic.sh --install $license_key
+    fi
+fi	
 
 
 

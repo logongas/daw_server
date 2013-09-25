@@ -26,9 +26,10 @@ nrsysmond-config --set license_key=$license_key
 #Monitorizar el Tomcat
 mkdir /home/newrelic
 cd /home/newrelic
-wget https://rpm.newrelic.com/newrelic_agent2.20.0.zip
-unzip newrelic_agent2.20.0.zip
-sed "s/app_name: My Application/app_name: $(hostname)/g" /home/newrelic/newrelic/newrelic.yml | sponge /home/newrelic/newrelic/newrelic.yml
+wget http://download.newrelic.com/newrelic/java-agent/newrelic-agent/2.21.4/newrelic-agent2.21.4.zip
+unzip newrelic-agent2.21.4.zip
+sed "s/app_name: My Application/app_name: $(hostname)/g" ./newrelic/newrelic.yml | sponge ./newrelic/newrelic.yml
+sed "s/<%= license_key %>/$license_key/g" ./newrelic/newrelic.yml | sponge ./newrelic/newrelic.yml
 echo JAVA_OPTS=\"\${JAVA_OPTS} -javaagent:/home/newrelic/newrelic/newrelic.jar\"    >> /etc/default/tomcat7
 chown -R tomcat7:tomcat7 /home/newrelic
 
